@@ -64,7 +64,6 @@ def registrar_usuario(request):
         )
 
         if user is not None:
-            login(request, user)
             return redirect('inicio_sesion')
 
         return render(request, 'registro.html', {'error': True})
