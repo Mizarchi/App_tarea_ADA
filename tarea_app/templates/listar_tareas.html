@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul>
+        {% for tarea in tareas %}
+            <li>
+                {{ tarea.titulo }} - {{ tarea.estado }}
+                <form action="{% url 'editar_tarea' tarea.id %}" method="GET">
+                    <button type="submit">Editar</button>
+                </form>
+                <form action="{% url 'eliminar_tarea' tarea.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="{% url 'crear_tarea' %}" method="GET">
+        <button type="submit">Nueva Tarea</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarea</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: black;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editar Tarea</h1>
+    <form action="{% url 'editar_tarea' tarea.id %}" method="POST">
+        {% csrf_token %}
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{{ tarea.titulo }}" required><br>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required>{{ tarea.descripcion }}</textarea><br>
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado" required>
+            <option value="Pendiente" {% if tarea.estado == 'Pendiente' %}selected{% endif %}>Pendiente</option>
+            <option value="Completado" {% if tarea.estado == 'Completado' %}selected{% endif %}>Completado</option>
+        </select><br>
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href="{% url 'listar_tareas' %}" class="button">Regresar a la lista de tareas</a>
+</body>
+</html>
