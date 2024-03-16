@@ -80,7 +80,7 @@ def iniciar_sesion(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect(next)
+            return redirect('listar_tareas')
         else:
             # Mostrar mensaje de error de inicio de sesión
             return render(request, 'inicio_de_sesion.html', {'error': True})
