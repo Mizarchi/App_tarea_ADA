@@ -10,7 +10,7 @@
     {% if error %}
     <p>Usuario o contraseña incorrectos. Inténtalo de nuevo.</p>
     {% endif %}
-    <form action="{% url 'iniciar_sesion' %}" method="POST">
+    <form action="{% url 'inicio_sesion' %}" method="POST">
         {% csrf_token %}
         <label for="username">Nombre de usuario:</label>
         <input type="text" id="username" name="username" required><br>
