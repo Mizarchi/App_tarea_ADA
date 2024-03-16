@@ -9,9 +9,14 @@
 
 <body>
     <h1>Registro de Usuario</h1>
-    {% if error %}
+    {% if error_username %}
     <p>
         El nombre de usuario ya existe. Inténtalo de nuevo.
+    </p>
+    {% endif %}
+    {% if error_email %}
+    <p>
+        El correo electrónico ya está en uso. Inténtalo de nuevo.
     </p>
     {% endif %}
     <form action="{% url 'registro' %}" method="POST">
