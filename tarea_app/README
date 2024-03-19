@@ -1,0 +1,24 @@
+¡Muy buenas a todos! Estoy emocionada de presentarles la aplicación de lista de tareas que he desarrollado utilizando Django. Esta aplicación proporciona una forma fácil y eficiente para que los usuarios gestionen sus tareas diarias, permitiéndoles crear, ver, editar y eliminar tareas de manera intuitiva y segura.
+
+Objetivos del Proyecto:
+El objetivo principal de este proyecto fue crear una aplicación web completa utilizando el framework Django, implementando funcionalidades CRUD, un sistema de autenticación de usuarios y una interfaz de usuario clara y amigable.
+
+Funcionalidades Implementadas:
+1. Modelo de Datos: He implementado un modelo de datos llamado `Task` en Django que incluye los campos de título, descripción, fecha de creación y estado.
+2. Funcionalidad CRUD: Los usuarios pueden crear nuevas tareas, ver una lista de todas las tareas, editar tareas existentes y eliminar tareas según sea necesario.
+3. Interfaz de Usuario: Diseñé una interfaz sencilla y clara utilizando Django Templates, asegurándome de que fuera intuitiva y fácil de usar para los usuarios.
+4. Autenticación de Usuarios: Implementé un sistema de autenticación de usuarios utilizando el módulo de autenticación de Django. Los usuarios deben registrarse e iniciar sesión para gestionar sus tareas, y cada usuario solo tiene acceso a sus propias tareas.
+5. Django Admin: Utilicé el panel de administración de Django para administrar los modelos de datos, especialmente el modelo `Task`, lo que facilita la gestión de datos de manera eficiente.
+6. Validaciones y Seguridad: Todos los datos ingresados en los formularios son validados adecuadamente para garantizar la integridad de los datos. Además, implementé medidas de seguridad básicas como la protección contra CSRF en formularios.
+
+Herramientas y Tecnologías Utilizadas:
+- Backend: Django como framework principal.
+- Base de Datos: SQLite para desarrollo y pruebas.
+- Frontend: Django Templates para el renderizado de la interfaz de usuario.
+- Autenticación: Módulo de autenticación de Django para el registro y autenticación de usuarios.
+- Estilo de la Interfaz: CSS básico para un diseño responsivo y atractivo.
+
+Conclusion:
+En resumen, la aplicación de lista de tareas desarrollada con Django cumple con los criterios mínimos de aceptación establecidos, ofreciendo una solución eficiente y segura para la gestión de tareas. Estoy abierto a cualquier pregunta o sugerencia que puedan tener, ¡así que no duden en compartir sus comentarios!
+
+¡Gracias por su atención y espero que disfruten explorando la aplicación!
