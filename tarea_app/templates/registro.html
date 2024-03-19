@@ -1,37 +1,70 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Registro de Usuario</h1>
-    {% if error_username %}
-    <p>
-        El nombre de usuario ya existe. Inténtalo de nuevo.
-    </p>
-    {% endif %}
-    {% if error_email %}
-    <p>
-        El correo electrónico ya está en uso. Inténtalo de nuevo.
-    </p>
-    {% endif %}
-    <form action="{% url 'registro' %}" method="POST">
-        {% csrf_token %}
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required /><br />
+    <div class="centrar2">
+        <h1 class="logo2">ALIOTH</h1>
+    </div>
+    <div class="inicio_sesion1">
 
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required /><br />
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required /><br />
+        {% if error_username %}
+        <p>
+            El nombre de usuario ya existe. Inténtalo de nuevo.
+        </p>
+        {% endif %}
+        {% if error_email %}
+        <p>
+            El correo electrónico ya está en uso. Inténtalo de nuevo.
+        </p>
+        {% endif %}
 
-        <button type="submit">Registrarse</button>
-    </form>
+        <form action="{% url 'registro' %}" method="POST">
+            {% csrf_token %}
+
+
+            <h1 class="titulo">Registro</h1>
+            <div class="inicio_sesion3">
+
+                <div class="usuario">
+                    <div>
+                        <label class="label" for="username">Nombre de usuario:</label>
+                    </div>
+                    <div>
+                        <input class="input" type="text" id="username" name="username" required /><br />
+                    </div>
+                    <div class="usuario">
+                        <div>
+                            <label class="label" for="email">Correo electrónico:</label>
+                        </div>
+                        <div>
+                            <input class="input" type="email" id="email" name="email" required /><br />
+                        </div>
+                        <div class="usuario">
+                            <label class="label" for="password">Contraseña:</label>
+                        </div>
+                        <input class="input" type="password" id="password" name="password" required /><br />
+                    </div>
+                    <div class="botones">
+                        <button class="boton4" type="submit">Registrarse</button>
+                        <a class="boton4" href="{% url 'inicio_sesion' %}">atras</a>
+                    </div>
+                </div>
+        </form>
+    </div>
 </body>
 
 </html>

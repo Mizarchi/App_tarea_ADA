@@ -1,38 +1,66 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Tarea</title>
-    <style>
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: black;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Editar Tarea</h1>
-    <form action="{% url 'editar_tarea' tarea.id %}" method="POST">
-        {% csrf_token %}
-        <label for="titulo">Título:</label>
-        <input type="text" id="titulo" name="titulo" value="{{ tarea.titulo }}" required><br>
-        <label for="descripcion">Descripción:</label>
-        <textarea id="descripcion" name="descripcion" required>{{ tarea.descripcion }}</textarea><br>
-        <label for="estado">Estado:</label>
-        <select id="estado" name="estado" required>
-            <option value="Pendiente" {% if tarea.estado == 'Pendiente' %}selected{% endif %}>Pendiente</option>
-            <option value="Completado" {% if tarea.estado == 'Completado' %}selected{% endif %}>Completado</option>
-        </select><br>
-        <button type="submit">Guardar</button>
-    </form>
+    <div class="header">
+        <h1 class="logo1">ALIOTH</h1>
+    </div>
 
-    <a href="{% url 'listar_tareas' %}" class="button">Regresar a la lista de tareas</a>
+        <div class="center">
+            <div class="form-1">
+                <h1 class="titulo">Editar Tarea</h1>
+
+
+                <form action="{% url 'editar_tarea' tarea.id %}" method="POST">
+                    {% csrf_token %}
+
+                    <div class="form-2">
+                        <div>
+                            <label for="titulo">Título:</label>
+                        </div>
+
+                        <div>
+                            <input class="input" type="text" id="titulo" name="titulo" value="{{ tarea.titulo }}" required><br>
+                        </div>
+
+                        <div>
+                           <label>Descripción:</label>
+                        </div>
+
+                        <div>
+                           <textarea class="input" id="descripcion" name="descripcion" required>{{ tarea.descripcion }}</textarea><br>
+                        </div>
+
+                        <div>
+                            <label for="estado">Estado:</label>
+                        </div>
+
+                         <div>
+                             <select class="input" id="estado" name="estado" required>
+                             <option value="Pendiente" {% if tarea.estado == 'Pendiente' %}selected{% endif %}>Pendiente</option>
+                             <option value="Completado" {% if tarea.estado == 'Completado' %}selected{% endif %}>Completado</option>
+                             </select><br>
+                         </div>
+
+                        <button class="boton1" type="submit">Guardar</button>
+                         <a href="{% url 'listar_tareas' %}" class="boton1">atras</a>
+                     </div>
+                 </form>
+            </div>
+        </div>
 </body>
+
 </html>
+
