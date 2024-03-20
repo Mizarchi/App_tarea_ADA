@@ -50,19 +50,19 @@
                     <div class="botones">
                         <button class="boton4" type="submit">Registrarse</button>
                         <a class="boton4" href="{% url 'inicio_sesion' %}">atras</a>
-                    </div>
-                    {% if error_username %}
-                    <p>
-                       El nombre de usuario ya existe. Inténtalo de nuevo.
-                    </p>
-                               {% endif %}
-                              {% if error_email %}
-                     <p>
-                       El correo electrónico ya está en uso. Inténtalo de nuevo.
-                    </p>
-                       {% endif %}
                 </div>
         </form>
+    </div>
+    {% if error_username %}
+    <p>
+       El nombre de usuario ya existe. Inténtalo de nuevo.
+    </p>
+               {% endif %}
+              {% if error_email %}
+     <p>
+       El correo electrónico ya está en uso. Inténtalo de nuevo.
+    </p>
+       {% endif %}
     </div>
 </body>
 
