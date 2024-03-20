@@ -131,7 +131,7 @@ a {
   font-style: normal;
   padding: 5px;
   border-radius: 10px;
-  height: 600px;
+  height: 670px;
   background-color:white;
   list-style-type:none
 }
@@ -155,11 +155,11 @@ a {
 }
 
 .inicio_sesion3{
-  margin-top: 70px;
+  margin: 0px;
   background-color:#ce66ff;
   padding: 20px;
   border-radius: 20px 20px 0px 0px;
-  height: 438px;
+  height: 510px;
   width: 370px;
 }
 

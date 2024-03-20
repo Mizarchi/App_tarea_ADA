@@ -21,17 +21,6 @@
     <div class="inicio_sesion1">
 
 
-        {% if error_username %}
-        <p>
-            El nombre de usuario ya existe. Inténtalo de nuevo.
-        </p>
-        {% endif %}
-        {% if error_email %}
-        <p>
-            El correo electrónico ya está en uso. Inténtalo de nuevo.
-        </p>
-        {% endif %}
-
         <form action="{% url 'registro' %}" method="POST">
             {% csrf_token %}
 
@@ -62,6 +51,16 @@
                         <button class="boton4" type="submit">Registrarse</button>
                         <a class="boton4" href="{% url 'inicio_sesion' %}">atras</a>
                     </div>
+                    {% if error_username %}
+                    <p>
+                       El nombre de usuario ya existe. Inténtalo de nuevo.
+                    </p>
+                               {% endif %}
+                              {% if error_email %}
+                     <p>
+                       El correo electrónico ya está en uso. Inténtalo de nuevo.
+                    </p>
+                       {% endif %}
                 </div>
         </form>
     </div>
