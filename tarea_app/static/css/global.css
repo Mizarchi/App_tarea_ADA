@@ -1,206 +1,33 @@
-@media (max-width: 360) {
-}
-
-body{
-  margin: 0px;
-  padding: 0px;
-  background: rgb(234,192,255);
-  background: linear-gradient(90deg, rgba(234,192,255,1) 0%, rgba(255,207,207,1) 100%);
-}
-.header{
-  margin-top: 0px;
-  background-color: white;
-  padding:10px; 
-  display: flex;
-  justify-content: space-between;
-}
-.header h1{
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.logo1{
-  font-family: "Plaster", system-ui;
-  font-size:25px;
-  color: #bb2cff
-}
-
 .centrar2{
- display: flex;
- justify-content: center;
-}
-
-.logo2{
-  font-family: "Plaster", system-ui;
-  font-size:25px;
-  color: #bb2cff
-}
-
-.center{
-  margin-top: 100px;
-}
-
-.form-1{
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 5px;
-  border-radius: 10px;
-  height: 700px;
-  overflow: scroll;
-  background-color:white;
-  list-style-type:none
-
-}
-
-.form-2{
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: rgb(234,192,254);
-  background-color: linear-gradient(90deg, rgba(234,192,254,0.6783963585434174) 0%, rgba(255,207,207,0.6167717086834734) 100%);;
-  width: 90%;
-  border-radius: 5px;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 10px;
-
-}
-
-
-.tareas{
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 0px;
-  display: block;
-  list-style-type: none
-}
-
-.titulo{
-  text-align: center;
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.boton1{
-  border: 0px;
-  border-radius: 5px;
-  color: black;
-  background-color: white;
-  margin-left: 10px;
-  margin-top: 10px;
-  padding: 5px;
-  font-size: 13px;
-  font-family:"Belanosima", sans-serif;
-}
-
-
-.formulario{
   display: flex;
-
-}
-
-a {
-
-  text-decoration: none;
-  
-  }
-.nueva_tarea{
   justify-content: center;
-  display: flex;
-  
-
 }
 
-.boton3{
-  color: black;
-  background-color:rgba(255,207,207,1);
-  padding:10px;
-  border-radius: 5px;
-  font-family:"Belanosima", sans-serif;
+.contenedor{
+  display: flex;
+  justify-content: center;
+  margin: 7%;
 }
 
 .inicio_sesion1{
-  margin-top: 100px;
+  border: 1px solid black;
+  height: 224px;
+  width: 263px;
   display: flex;
   justify-content: center;
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding: 5px;
-  border-radius: 10px;
-  height: 600px;
-  background-color:white;
-  list-style-type:none
-}
-
-.input{
   border-radius: 20px;
-  height: 30px;
-  width: 98%;
-  border: 0px;
-  margin-top: 10px;
-  padding-left: 5px;
-  padding-top: 3px;
-}
-.inicio_sesion2{
-  margin-top: 150px;
-  background-color:#ce66ff;
-  padding: 20px;
-  border-radius: 20px 20px 0px 0px;
-  height: 359px;
-  width: 370px;
 }
 
-.inicio_sesion3{
-  margin: 0px;
-  background-color:#ce66ff;
-  padding: 20px;
-  border-radius: 20px 20px 0px 0px;
-  height: 510px;
-  width: 370px;
-}
-
-.usuario{
-  margin-top: 50px;
-  margin-bottom: 20px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.contraseña{
-  margin-top: 50px;
-  margin-bottom: 20px;
-  margin-bottom: 10px;
-  font-size: 20px;
-
-}
-
-.botones{
+.header{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
-.boton4{
-  color: black;
-  border: 0px;
-  border-radius: 5px;
-  background-color: white;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 10px;
-  font-family: "Belanosima", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  padding: 10px;
+.boton3{
+  margin-top: 35px;
+  margin-left: 25px;
 }
 
-
-.text2{
-  display: flex;
-  justify-content: center;
+.center{
+  background: #D9D9D9;
 }
